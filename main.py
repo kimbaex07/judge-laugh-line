@@ -2,8 +2,8 @@
 """Write the entry one-liner to $MAKEFUN_OUTPUT_DIR/entry.txt.
 
 Reads entry.txt next to this script, validates the gate (1-200 characters,
-not whitespace-only, a single line), and writes the exact bytes to the
-output directory. Pure Python standard library only.
+not whitespace-only, a single line, at least one letter), and writes the
+exact bytes to the output directory. Pure Python standard library only.
 """
 
 import os
@@ -31,6 +31,9 @@ def main() -> int:
         return 1
     if "\n" in text or "\r" in text:
         print("entry.txt must be a single line", file=sys.stderr)
+        return 1
+    if not any(ch.isalpha() for ch in text):
+        print("entry.txt must contain at least one letter", file=sys.stderr)
         return 1
     out_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "output"))
     out_dir.mkdir(parents=True, exist_ok=True)
