@@ -10,7 +10,7 @@ My entry for the [Make the Judge Laugh in One Line](https://make.fun/bounty/u-em
 
 ## Why it fits the brief
 
-The setup gives a household appliance legal agency, which is already absurd, and the punchline turns the most relatable 3 a.m. habit — opening the fridge just to stare — into the crime. The joke lands on a first read: the fridge is the victim, the human is the menace, and "emotional abuse" is the last phrase you expect in a sentence about a kitchen appliance. It is one line, 116 characters, no setup wasted.
+The setup gives a household appliance legal agency, which is already absurd, and the punchline turns the most relatable 3 a.m. habit — opening the fridge just to stare — into the crime. The joke lands on a first read: the fridge is the victim, the human is the menace, and "emotional abuse" is the last phrase you expect in a sentence about a kitchen appliance. No word is wasted: every clause either sets up the restraining order or pays it off.
 
 The line is 116 characters, one line, no trailing newline — inside the gate of 1–200 characters.
 
@@ -20,7 +20,7 @@ The line is 116 characters, one line, no trailing newline — inside the gate of
 MAKEFUN_OUTPUT_DIR=output python3 main.py
 ```
 
-`main.py` (pure Python standard library) reads `entry.txt`, checks the gate — one line, 1–200 characters, not whitespace-only — and writes the exact bytes to `$MAKEFUN_OUTPUT_DIR/entry.txt`.
+`main.py` (pure Python standard library) reads `entry.txt`, checks the gate — one line, 1–200 characters, not whitespace-only, at least one letter — and writes the exact bytes to `$MAKEFUN_OUTPUT_DIR/entry.txt`.
 
 ## License
 
